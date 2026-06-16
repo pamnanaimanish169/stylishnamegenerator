@@ -1,0 +1,4 @@
+# Netlify / Cloudflare Pages — force one canonical URL (301)
+http://stylishnamegenerator.in/* https://stylishnamegenerator.in/:splat 301!
+http://www.stylishnamegenerator.in/* https://stylishnamegenerator.in/:splat 301!
+https://www.stylishnamegenerator.in/* https://stylishnamegenerator.in/:splat 301!

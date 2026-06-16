@@ -1,0 +1,19 @@
+# Canonical URL: https://stylishnamegenerator.in (HTTPS, no www)
+# Edit or create this file in Hostinger File Manager → public_html/.htaccess
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1) www → apex (works for both HTTP and HTTPS)
+  RewriteCond %{HTTP_HOST} ^www\.stylishnamegenerator\.in$ [NC]
+  RewriteRule ^(.*)$ https://stylishnamegenerator.in/$1 [R=301,L,NE]
+
+  # 2) HTTP apex → HTTPS apex
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^(.*)$ https://stylishnamegenerator.in/$1 [R=301,L,NE]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+</IfModule>
