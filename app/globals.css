@@ -181,15 +181,42 @@ body {
   border-color: var(--border);
 }
 
+.logo-brand-link {
+  display: inline-flex;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.logo-brand {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 100%;
+}
+
+.logo-brand__mark {
+  display: block;
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  min-height: 22px;
+  max-width: 22px;
+  max-height: 22px;
+  flex: 0 0 22px;
+  filter: drop-shadow(0 0 6px var(--glow-pink));
+}
+
 .logo-mark {
   font-family: var(--font-display);
-  font-size: 1.15rem;
-  letter-spacing: 0.06em;
+  font-size: clamp(0.82rem, 2.4vw, 1rem);
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
   color: var(--neon-pink);
   text-shadow:
-    0 0 8px var(--glow-pink),
-    0 0 24px var(--glow-pink),
-    0 0 48px rgba(255, 45, 149, 0.2);
+    0 0 6px var(--glow-pink),
+    0 0 16px rgba(255, 45, 149, 0.35);
   animation: neon-flicker 6s ease-in-out infinite;
 }
 
