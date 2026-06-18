@@ -6,6 +6,10 @@ export const SITEMAP_PATHS = [
   "/",
   "/bgmi-name-generator",
   "/free-fire-name-generator",
+  "/about-us",
+  "/contact-us",
+  "/privacy-policy",
+  "/disclaimer",
 ] as const;
 
 /** Normalize a path for sitemap/canonical URLs (matches trailingSlash: true). */

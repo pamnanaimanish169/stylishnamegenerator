@@ -7,7 +7,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return SITEMAP_PATHS.map((path) => ({
     url: `${SITE_URL}${withTrailingSlash(path)}`,
     lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: path === "/" ? 1 : 0.8,
+    priority:
+      path === "/"
+        ? 1
+        : path === "/about-us" ||
+            path === "/contact-us" ||
+            path === "/privacy-policy" ||
+            path === "/disclaimer"
+          ? 0.4
+          : 0.8,
+    changeFrequency:
+      path === "/about-us" ||
+      path === "/contact-us" ||
+      path === "/privacy-policy" ||
+      path === "/disclaimer"
+        ? "monthly"
+        : "weekly",
   }));
 }
