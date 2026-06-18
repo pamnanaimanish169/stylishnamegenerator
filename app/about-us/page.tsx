@@ -33,7 +33,7 @@ export default function AboutUsPage() {
     >
       <section aria-labelledby="origin-heading">
         <p>
-          I built this site in 2025 after spending way too long trying to
+          I built this site in 2026 after spending way too long trying to
           figure out how players in my Counter-Strike lobbies got those fancy,
           curved-letter names while mine sat there in plain text. I assumed
           there was a hidden settings menu. There wasn&apos;t. The answer was

@@ -23,7 +23,7 @@ const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
 const OG_IMAGE = "/free-fire-name-generator-stylish-fonts.webp";
 
 const TITLE =
-  "Free Fire Name Generator 🔥 Stylish FF Names Copy Paste (2025)";
+  "Free Fire Name Generator 🔥 Stylish FF Names Copy Paste (2026)";
 const DESCRIPTION =
   "Create stylish Free Fire names with fancy Unicode fonts. Copy paste instantly into your FF account — 100+ name styles, symbols, and unique name ideas for Free Fire MAX.";
 

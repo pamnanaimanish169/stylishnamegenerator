@@ -17,7 +17,7 @@ const PAGE_PATH = "/bgmi-name-generator";
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
 
 const TITLE =
-  "BGMI Name Generator 🎮 Stylish Fonts & Symbols Copy Paste (2025)";
+  "BGMI Name Generator 🎮 Stylish Fonts & Symbols Copy Paste (2026)";
 const DESCRIPTION =
   "Generate stylish BGMI names using fancy Unicode fonts and symbols. Copy paste in one click — works directly in Battlegrounds Mobile India. 100+ styles including ꧁borders༺ and special characters.";
 
