@@ -388,7 +388,27 @@ export default function BgmiNameStylePageContent() {
       </section>
 
       <div className="reveal reveal-delay-5 mt-12">
-        <RelatedTools />
+        <RelatedTools
+          tools={[
+            {
+              href: "/",
+              title: "Stylish Name Generator",
+              description:
+                "Every Unicode font style in one place — all platforms.",
+            },
+            {
+              href: "/free-fire-name-generator",
+              title: "Free Fire Name Generator",
+              description: "FF-compatible fonts, symbols, and a 20-char counter.",
+            },
+            {
+              href: "/freestyle-nickname-generator",
+              title: "Freestyle Nickname Generator",
+              description:
+                "Creative nicknames with vibe buckets — no character limit.",
+            },
+          ]}
+        />
       </div>
     </main>
   );

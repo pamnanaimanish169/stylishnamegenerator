@@ -6,6 +6,7 @@ export const SITEMAP_PATHS = [
   "/",
   "/bgmi-name-generator",
   "/free-fire-name-generator",
+  "/freestyle-nickname-generator",
   "/about-us",
   "/contact-us",
   "/privacy-policy",

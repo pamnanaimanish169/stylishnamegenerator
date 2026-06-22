@@ -963,3 +963,110 @@ body {
   color: var(--cream-muted);
   margin: 0;
 }
+
+.surprise-btn {
+  font-family: var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--neon-pink);
+  border: 1px solid rgba(255, 45, 149, 0.45);
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.12s;
+}
+
+.surprise-btn:hover {
+  background: var(--neon-pink);
+  color: var(--night);
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 20px var(--glow-pink);
+}
+
+.surprise-result {
+  border: 1px solid rgba(255, 45, 149, 0.35);
+  background:
+    linear-gradient(135deg, var(--neon-pink-dim) 0%, transparent 50%),
+    var(--night-surface);
+  box-shadow: 0 0 32px var(--neon-pink-dim);
+}
+
+.surprise-result__label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--neon-pink);
+  margin-bottom: 0.75rem;
+}
+
+.surprise-result__meta {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  color: var(--cream-faint);
+}
+
+.vibe-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.vibe-tabs__btn {
+  flex: 1 1 calc(50% - 0.2rem);
+  min-height: 2.75rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--border);
+  background: var(--night-surface);
+  color: var(--cream-muted);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    color 0.2s;
+}
+
+.vibe-tabs__btn--active {
+  border-color: var(--neon-cyan);
+  background: var(--neon-cyan-dim);
+  color: var(--cream);
+  box-shadow: 0 0 16px var(--glow-cyan);
+}
+
+.vibe-buckets {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.vibe-bucket__heading {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--cream);
+  margin-bottom: 0.35rem;
+}
+
+.vibe-bucket__desc {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--cream-faint);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 767px) {
+  .vibe-bucket--hidden-mobile {
+    display: none;
+  }
+}
+
+.curated-name-grid__cta {
+  margin: -0.35rem 0 0.75rem;
+  font-size: 0.85rem;
+}

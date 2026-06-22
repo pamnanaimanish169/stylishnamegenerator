@@ -157,9 +157,9 @@ const FF_RELATED_TOOLS = [
     description: "Stylish BGMI fonts and symbols with a 16-char counter.",
   },
   {
-    href: "/instagram-stylish-fonts",
-    title: "Instagram Stylish Fonts",
-    description: "Fancy fonts for bios, captions, and display names.",
+    href: "/freestyle-nickname-generator",
+    title: "Freestyle Nickname Generator",
+    description: "Creative nicknames with vibe buckets — no character limit.",
   },
 ] as const;
 

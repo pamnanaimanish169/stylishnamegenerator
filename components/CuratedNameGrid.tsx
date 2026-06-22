@@ -41,14 +41,23 @@ function CopyButton({ text }: { text: string }) {
 
 export default function CuratedNameGrid({
   categories,
+  toolAnchorId,
 }: {
   categories: CuratedNameCategory[];
+  toolAnchorId?: string;
 }) {
   return (
     <div className="curated-name-grid">
       {categories.map((category) => (
         <div key={category.title} className="curated-name-grid__category">
           <h3 className="curated-name-grid__subtitle">{category.title}</h3>
+          {toolAnchorId && (
+            <p className="curated-name-grid__cta">
+              <a href={`#${toolAnchorId}`} className="intro-link">
+                Generate your own version ↑
+              </a>
+            </p>
+          )}
           <ul className="curated-name-grid__list">
             {category.names.map((name) => (
               <li key={name} className="curated-name-grid__item">
