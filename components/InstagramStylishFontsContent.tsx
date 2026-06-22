@@ -3,6 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import {
+  InstagramCharCountSection,
+  InstagramCreatorWorkflowSection,
+  InstagramFontsBreakSection,
+  InstagramMythsSection,
+  InstagramUnicodeStackingSection,
+} from "@/components/InstagramExpertArticle";
 import Breadcrumb from "@/components/Breadcrumb";
 import InstagramFontGenerator from "@/components/InstagramFontGenerator";
 import RelatedTools from "@/components/RelatedTools";
@@ -176,10 +183,11 @@ export default function InstagramStylishFontsContent() {
           on both iOS and Android.
         </p>
         <p>
-          For multiline bios, type each line separately in the generator or use
-          a pre-made template from the section below. Styled captions work the
-          same way — paste into the caption field before posting a photo or
-          story.
+          For multiline bios, type each line in the generator or use a pre-made
+          template below. <strong>Feed post captions</strong> accept pasted
+          Unicode fonts the same way. Instagram&apos;s <strong>Story text
+          sticker</strong> re-renders pasted text with its own fonts — fancy
+          Unicode pasted into Story overlays usually won&apos;t keep the style.
         </p>
         <Image
           src="/instagram-stylish-fonts-bio-generator.svg"
@@ -190,6 +198,9 @@ export default function InstagramStylishFontsContent() {
           className="mt-6 w-full max-w-2xl rounded-xl border border-[var(--border)]"
         />
       </section>
+
+      <InstagramFontsBreakSection />
+      <InstagramCharCountSection />
 
       <section
         aria-labelledby="bio-templates-heading"
@@ -288,6 +299,10 @@ export default function InstagramStylishFontsContent() {
           ))
         )}
       </section>
+
+      <InstagramMythsSection />
+      <InstagramCreatorWorkflowSection />
+      <InstagramUnicodeStackingSection />
 
       <section
         aria-labelledby="faq-heading"
