@@ -253,20 +253,6 @@ export default function FreeFireNameGeneratorPage() {
           <FreeFireNameGenerator />
         </div>
 
-        <figure className="reveal reveal-delay-3 mb-10 max-w-md">
-          <Image
-            src={OG_IMAGE}
-            alt="Free Fire name generator showing stylish Unicode font styles for FF and Free Fire MAX"
-            width={640}
-            height={400}
-            className="rounded-xl border border-[var(--border)]"
-            priority
-          />
-          <figcaption className="mt-2 text-center text-xs text-[var(--cream-faint)]">
-            Stylish FF names in the lobby name field
-          </figcaption>
-        </figure>
-
         <article className="article-content reveal reveal-delay-4">
           <section aria-labelledby="font-styles-heading">
             <h2 id="font-styles-heading" className="article-heading">

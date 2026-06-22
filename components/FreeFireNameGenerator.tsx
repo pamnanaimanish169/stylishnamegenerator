@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
   generateFreeFireAll,
@@ -9,6 +10,43 @@ import {
   FREE_FIRE_NAME_LIMIT,
   FREE_FIRE_SYMBOLS,
 } from "@/lib/freeFireSymbols";
+
+const FF_APPLY_STEPS = [
+  {
+    text: (
+      <>
+        Open <strong>Profile</strong> from the lobby, then tap the yellow{" "}
+        <strong>edit icon</strong> (pencil and notebook) in the bottom-right
+        corner of your player info card.
+      </>
+    ),
+    image: "/free-fire/step-1-profile.png",
+    alt: "Free Fire profile screen with the edit icon highlighted on the player info card",
+  },
+  {
+    text: (
+      <>
+        In the <strong>PLAYER INFO</strong> window, select the{" "}
+        <strong>BASIC</strong> tab, then tap the <strong>pencil icon</strong>{" "}
+        next to your current nickname.
+      </>
+    ),
+    image: "/free-fire/step-2-player-info.png",
+    alt: "Free Fire Player Info screen with the Basic tab and nickname edit button highlighted",
+  },
+  {
+    text: (
+      <>
+        Paste your copied <strong>stylish Free Fire name</strong> into the
+        nickname field, check the preview for boxes or truncation, then tap{" "}
+        <strong>CONFIRM</strong> to use a Name Change Card or pay diamonds to
+        finalize.
+      </>
+    ),
+    image: "/free-fire/step-3-change-nickname.png",
+    alt: "Free Fire Change Nickname dialog with the input field and Confirm button",
+  },
+] as const;
 
 function CopyButton({ text }: { text: string }) {
   const [copied, setCopied] = useState(false);
@@ -142,6 +180,7 @@ export default function FreeFireNameGenerator() {
   const previewText = results[previewStyle]?.text ?? (input || "YourName");
 
   return (
+    <>
     <section
       className="tool-section w-full"
       aria-label="Free Fire name generator tool"
@@ -229,5 +268,38 @@ export default function FreeFireNameGenerator() {
         ))}
       </div>
     </section>
+
+    <section
+      aria-labelledby="ff-apply-heading"
+      className="article-content mt-14"
+    >
+      <h2 id="ff-apply-heading" className="article-heading">
+        How to Apply Your New Name Style in Free Fire
+      </h2>
+      <p className="mb-6 text-sm leading-relaxed text-[var(--cream-faint)]">
+        After you copy a styled name from the generator above, follow these
+        in-game steps in Free Fire or Free Fire MAX — both clients use the same
+        profile rename flow.
+      </p>
+      <ol className="how-steps gap-6">
+        {FF_APPLY_STEPS.map((step, index) => (
+          <li key={step.image} className="how-step">
+            <p>
+              <span className="sr-only">Step {index + 1}: </span>
+              {step.text}
+            </p>
+            <Image
+              src={step.image}
+              alt={step.alt}
+              width={1024}
+              height={460}
+              sizes="(max-width: 768px) 100vw, 640px"
+              className="mt-3 w-full max-w-2xl rounded-xl border border-[var(--border)]"
+            />
+          </li>
+        ))}
+      </ol>
+    </section>
+    </>
   );
 }
