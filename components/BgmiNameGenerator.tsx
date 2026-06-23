@@ -172,10 +172,11 @@ export default function BgmiNameGenerator() {
             )}
           </div>
           <p className="mt-2 text-xs text-[var(--cream-faint)]">
-            Counter guide: <strong>left number</strong> = what you typed,
-            <strong> right number</strong> = BGMI&apos;s hard cap. Keep your
-            final copied style at or below 16 because some Unicode symbols use
-            more than one character slot.
+            Counter guide: <strong>left number</strong> = code points in your
+            input, <strong>right number</strong> = BGMI&apos;s slot cap. The
+            game counts UTF-16 units, not visible letters — a 5-glyph name can
+            register as 11 slots. See the 14/16 character guide below before
+            spending a Rename Card.
           </p>
 
           <div className="symbol-picker mt-4">

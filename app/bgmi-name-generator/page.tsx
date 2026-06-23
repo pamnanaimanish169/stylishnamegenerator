@@ -21,7 +21,7 @@ const FAQ_ITEMS = [
   {
     question: "How can I add an invisible space to my BGMI name style?",
     answer:
-      "Some players insert the Hangul Filler character (U+3164, ㅤ) to create visual padding without visible text. It occupies a code point in BGMI's character counter even though it renders blank on most screens. Paste it between symbols and letters to widen spacing — for example, ꧁ㅤProㅤ꧂ — but use sparingly: BGMI's validator may reject strings with multiple consecutive fillers, and invisible characters can push you past the 14-character cap without obvious feedback. Always verify the final count in the in-game rename preview before confirming.",
+      "Some players insert the Hangul Filler character (U+3164, ㅤ) to create visual padding without visible text. It occupies one encoding slot in BGMI's character counter even though it renders blank on most screens. Paste it between symbols and letters to widen spacing — for example, ꧁ㅤProㅤ꧂ — but use sparingly: BGMI's validator may reject strings with multiple consecutive fillers, and invisible characters can push you past the ~14-slot visible limit (16 UTF-16 units) without obvious feedback. Always verify the final count in the in-game rename preview before confirming.",
   },
   {
     question: "How many times can I change my style using a Rename Card?",
