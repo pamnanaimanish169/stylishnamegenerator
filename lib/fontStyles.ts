@@ -303,3 +303,50 @@ export function generateFreeFireAll(input: string): FreeFireStyleResult[] {
       ffCompatible: FREE_FIRE_COMPATIBLE_IDS.has(style.id),
     }));
 }
+
+/** Aesthetic Unicode styles for Instagram bios, captions, and display names. */
+const INSTAGRAM_STYLE_IDS = [
+  "cursive-script",
+  "bold-cursive",
+  "small-caps",
+  "sans-italic",
+  "fullwidth",
+  "double-struck",
+  "circled",
+] as const;
+
+function applyMultiline(
+  text: string,
+  transform: (line: string) => string,
+): string {
+  return text
+    .split("\n")
+    .map((line) => (line.length === 0 ? line : transform(line)))
+    .join("\n");
+}
+
+export function generateInstagramAll(input: string): FontStyleResult[] {
+  const text = input.trim() === "" ? "YourName" : input;
+
+  const styleMaps: Record<
+    (typeof INSTAGRAM_STYLE_IDS)[number],
+    { name: string; map: Record<string, string> }
+  > = {
+    "cursive-script": { name: "Cursive Script", map: cursiveScript },
+    "bold-cursive": { name: "Bold Cursive", map: boldCursive },
+    "small-caps": { name: "Small Caps", map: smallCaps },
+    "sans-italic": { name: "Sans Italic", map: sansItalic },
+    fullwidth: { name: "Fullwidth", map: fullwidth },
+    "double-struck": { name: "Double Struck", map: doubleStruck },
+    circled: { name: "Circled", map: circled },
+  };
+
+  return INSTAGRAM_STYLE_IDS.map((id) => {
+    const { name, map } = styleMaps[id]!;
+    return {
+      id,
+      name,
+      text: applyMultiline(text, (line) => applyMap(line, map)),
+    };
+  });
+}

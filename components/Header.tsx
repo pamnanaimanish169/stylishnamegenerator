@@ -3,6 +3,7 @@ import Logo from "@/components/Logo";
 const navLinks = [
   { href: "/bgmi-name-generator", label: "BGMI Generator" },
   { href: "/free-fire-name-generator", label: "Free Fire Generator" },
+  { href: "/instagram-stylish-fonts", label: "Instagram Fonts" },
 ];
 
 export default function Header() {

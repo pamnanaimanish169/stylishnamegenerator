@@ -691,7 +691,28 @@ export default function BgmiNameStylePageContent() {
       </section>
 
       <div className="reveal reveal-delay-5 mt-12">
-        <RelatedTools />
+        <RelatedTools
+          tools={[
+            {
+              href: "/",
+              title: "Stylish Name Generator",
+              description:
+                "Every Unicode font style in one place — all platforms.",
+            },
+            {
+              href: "/free-fire-name-generator",
+              title: "Free Fire Name Generator",
+              description:
+                "Stylish FF fonts and symbols with copy-paste ready names.",
+            },
+            {
+              href: "/instagram-stylish-fonts",
+              title: "Instagram Stylish Fonts",
+              description:
+                "Fancy fonts for bios, captions, and display names.",
+            },
+          ]}
+        />
       </div>
     </main>
   );
