@@ -303,14 +303,14 @@ export default function MarathiFontsContent() {
           ))}
         </div>
 
-        <Image
+        {/* <Image
           src="/stylish-marathi-fonts-copy-paste-whatsapp.svg"
           alt="Stylish Marathi fonts copy paste — decorated Unicode Marathi text for WhatsApp and Instagram"
           width={640}
           height={400}
           sizes="(max-width: 768px) 100vw, 640px"
           className="mt-10 w-full max-w-2xl rounded-xl border border-[var(--border)]"
-        />
+        /> */}
       </section>
 
       <section
