@@ -36,7 +36,7 @@ const FAQ_ITEMS = [
   {
     question: "What is a fancy nickname generator?",
     answer:
-      "A fancy nickname generator converts plain text into decorative Unicode letterforms — cursive script, circled letters, fullwidth characters, and more — without installing fonts. It is the same technology behind stylish social media bios and gaming names, but focused on creative nicknames rather than a single platform. This page is a fancy nickname generator with vibe-based browsing so you can explore styles by mood, not just font name.",
+      "A fancy nickname generator converts plain text into decorative Unicode letterforms — bold cursive, circled letters, fullwidth characters, and more — without installing fonts. It is the same technology behind stylish social media bios and gaming names, but focused on creative nicknames rather than a single platform. This page is a fancy nickname generator with vibe-based browsing so you can explore styles by mood, not just font name.",
   },
   {
     question: "Can I use these nicknames on WhatsApp and Instagram?",
@@ -496,7 +496,7 @@ export default function FreestyleNicknameGeneratorPage() {
                   🌸 Soft / Aesthetic
                 </h3>
                 <p>
-                  Cursive script for bios, close-friend circles, and accounts
+                  Bold cursive for bios, close-friend circles, and accounts
                   where beauty matters more than being typed to find.
                 </p>
               </div>

@@ -5,7 +5,7 @@ export const RENDERING_COMPAT_TABLE = [
     riskyOn: "Very old MIUI/ColorOS skins with stripped Latin Extended",
   },
   {
-    style: "Cursive Script / Bold Cursive",
+    style: "Bold Cursive",
     safeOn: "Modern iOS, flagship Android, Instagram bio text",
     riskyOn: "Low-RAM Android 8–9 devices; some in-game HUDs",
   },

@@ -24,7 +24,6 @@ const PENDING_VERIFICATION = "Pending verification";
 
 const BGMI_FONT_DISPLAY_TABLE = [
   "Double Struck",
-  "Cursive Script",
   "Bold Cursive",
   "Fraktur Gothic",
   "Bold Fraktur",

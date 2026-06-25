@@ -19,7 +19,8 @@ import {
   FB_RELATED_TOOLS,
 } from "@/lib/facebookPageData";
 
-const OG_IMAGE = "/facebook-stylish-name-generator-fb-fonts.svg";
+const NAME_CHANGE_SCREENSHOT =
+  "/facebook-meta-accounts-centre-name-change.jpg";
 
 function CopyButton({
   text,
@@ -97,8 +98,8 @@ export default function FacebookStylishNameContent() {
           into fancy Unicode fonts you can <strong>copy paste</strong> straight
           into your FB profile — no app needed. Use this{" "}
           <strong>FB stylish name maker</strong> to preview{" "}
-          <strong>fancy Facebook fonts</strong> tested for compatibility before
-          you change your display name. Also try our{" "}
+          <strong>fancy Facebook fonts</strong> before you change your display
+          name. Also try our{" "}
           <Link href="/" className="intro-link">
             stylish name generator
           </Link>{" "}
@@ -133,15 +134,14 @@ export default function FacebookStylishNameContent() {
         <p>
           For status updates and bio text, paste styled fonts directly into the
           post composer or About section — no character limit like the 50-character
-          name field. Pick a style marked{" "}
-          <strong>✅ Works on Facebook</strong> for the most reliable results
-          across web and mobile.
+          name field. Simpler styles like Sans Bold and Bold Cursive tend to
+          render most reliably across web and mobile.
         </p>
         <Image
-          src={OG_IMAGE}
-          alt="Facebook stylish name generator showing fancy Unicode fonts for FB profile name — copy paste ready"
-          width={640}
-          height={400}
+          src={NAME_CHANGE_SCREENSHOT}
+          alt="Screenshot of the Meta Accounts Centre name change interface, showing a stylized gothic font being pasted into the first name input field."
+          width={1024}
+          height={769}
           sizes="(max-width: 768px) 100vw, 640px"
           className="mt-6 w-full max-w-2xl rounded-xl border border-[var(--border)]"
         />
@@ -159,12 +159,8 @@ export default function FacebookStylishNameContent() {
           Unicode styles that work fine on Instagram or in games. Heavily
           combining-character styles like strikethrough and underline can look
           broken in Facebook&apos;s name field, and some Mathematical Unicode
-          blocks do not render in older Android Facebook app versions. Styles
-          marked <strong>✅ Works on Facebook</strong> are tested to render
-          correctly; <strong>⚠️ May vary</strong> styles work on web but can
-          show as boxes on some mobile apps. Each font card in the{" "}
-          <strong>facebook stylish name generator</strong> above is labelled
-          so you know what to expect before you paste.
+          blocks do not render in older Android Facebook app versions. Simpler
+          styles like Bold Cursive and Sans Bold are usually the safest choices before you paste into your profile.
         </p>
       </section>
 
@@ -250,12 +246,12 @@ export default function FacebookStylishNameContent() {
                   <>
                     Type your name in the{" "}
                     <strong>FB stylish name generator</strong> above, pick a
-                    style marked with a green checkmark, and tap Copy. Open
-                    Facebook → tap your profile picture → Settings &amp; privacy
+                    style you like, and tap Copy. Open Facebook → tap your
+                    profile picture → Settings &amp; privacy
                     → Settings → Personal details → Name. Tap your name, paste
                     the styled text into the First name or Last name field, and
                     save. The same styled text works in Messenger. If Facebook
-                    rejects the name, try Cursive Script or Sans Bold — the most
+                    rejects the name, try Sans Bold or Bold Cursive — the most
                     reliable on all devices.
                   </>
                 ) : (

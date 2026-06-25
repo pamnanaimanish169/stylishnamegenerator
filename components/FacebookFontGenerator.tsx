@@ -4,72 +4,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import {
   FACEBOOK_NAME_LIMIT,
   generateFacebookAll,
-  type FacebookCompatLevel,
   type FacebookStyleResult,
 } from "@/lib/fontStyles";
-
-const COMPAT_LABELS: Record<
-  FacebookCompatLevel,
-  { short: string; detail: string; className: string }
-> = {
-  ok: {
-    short: "✅ Works on Facebook",
-    detail: "Tested — works on Facebook web and app",
-    className: "fb-compat-badge--ok",
-  },
-  vary: {
-    short: "⚠️ May vary",
-    detail:
-      "Inconsistent — works on web, may appear as boxes on older Android app",
-    className: "fb-compat-badge--warn",
-  },
-};
-
-function CompatBadge({ level }: { level: FacebookCompatLevel }) {
-  const [expanded, setExpanded] = useState(false);
-  const badgeRef = useRef<HTMLButtonElement>(null);
-  const { short, detail, className } = COMPAT_LABELS[level];
-
-  useEffect(() => {
-    if (!expanded) return;
-
-    const handleOutside = (e: MouseEvent | TouchEvent) => {
-      if (
-        badgeRef.current &&
-        !badgeRef.current.contains(e.target as Node)
-      ) {
-        setExpanded(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleOutside);
-    document.addEventListener("touchstart", handleOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleOutside);
-      document.removeEventListener("touchstart", handleOutside);
-    };
-  }, [expanded]);
-
-  return (
-    <button
-      ref={badgeRef}
-      type="button"
-      className={`fb-compat-badge ${className} ${expanded ? "fb-compat-badge--expanded" : ""}`}
-      onClick={() => setExpanded((prev) => !prev)}
-      onMouseEnter={() => setExpanded(true)}
-      onMouseLeave={() => setExpanded(false)}
-      aria-expanded={expanded}
-      aria-label={`${short}. ${detail}`}
-    >
-      <span className="fb-compat-badge__short">{short}</span>
-      {expanded && (
-        <span className="fb-compat-badge__detail" role="tooltip">
-          {detail}
-        </span>
-      )}
-    </button>
-  );
-}
 
 function CopyButton({ text }: { text: string }) {
   const [copied, setCopied] = useState(false);
@@ -114,11 +50,10 @@ function StyleCard({
 
   return (
     <article
-      className="style-card style-card--compat relative flex flex-col gap-3 rounded-xl p-4 sm:p-5"
+      className="style-card relative flex flex-col gap-3 rounded-xl p-4 sm:p-5"
       style={{ animationDelay: `${Math.min(index * 0.04, 0.6)}s` }}
     >
-      <CompatBadge level={style.fbCompat} />
-      <span className="style-label pr-24">{style.name}</span>
+      <span className="style-label">{style.name}</span>
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <p className="converted-name min-w-0">{style.text}</p>
         <CopyButton text={style.text} />
@@ -161,9 +96,8 @@ export default function FacebookFontGenerator() {
       aria-label="FB stylish name maker"
     >
       <p className="tool-instruction mb-4 text-sm leading-relaxed">
-        Type your name below to generate fancy Facebook fonts. Each style shows
-        a compatibility badge — green means tested on Facebook web and app,
-        yellow means it may look different on some devices.
+        Type your name below to generate fancy Facebook fonts. Tap Copy on any
+        style you like, then paste it into your profile name, bio, or status.
       </p>
 
       <div className="mb-3 flex flex-col gap-3 sm:flex-row">

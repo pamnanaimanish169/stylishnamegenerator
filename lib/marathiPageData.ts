@@ -39,7 +39,7 @@ export const MARATHI_DECORATION_PATTERNS: DecorationPattern[] = [
 export const MARATHI_STATIC_SAMPLES = [
   { name: "Bold Devanagari", text: "मराठी" },
   { name: "Outlined", text: "𝕄𝕣𝕒𝕥𝕙𝕚" },
-  { name: "Cursive", text: "𝓜𝓻𝓪𝓽𝓱𝓲" },
+  { name: "Bold Cursive", text: "𝓜𝓻𝓪𝓽𝓱𝓲" },
 ] as const;
 
 export type SymbolItem = {

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   BIO_BEFORE_AFTER,
@@ -8,6 +9,9 @@ import {
   MYTH_REALITY_ROWS,
   type MythVerdict,
 } from "@/lib/facebookExpertContent";
+
+const NAME_REJECTION_SCREENSHOT = "/facebook-name-rejection-error.png";
+const BIO_TYPOGRAPHY_SCREENSHOT = "/facebook-bio-typography-hierarchy.png";
 
 function ExpertNote({ children }: { children: React.ReactNode }) {
   return (
@@ -62,6 +66,15 @@ export function FacebookRejectionPatternsSection() {
         Unicode block ranges, account trust level, and field position.
       </p>
 
+      <Image
+        src={NAME_REJECTION_SCREENSHOT}
+        alt="Facebook name change screen showing an error that the entered stylish name contains characters that aren't allowed"
+        width={889}
+        height={1020}
+        sizes="(max-width: 768px) 100vw, 640px"
+        className="mt-6 w-full max-w-2xl rounded-xl border border-[var(--border)]"
+      />
+
       <h3 className="article-subheading">
         The &ldquo;looks fine, still rejected&rdquo; paradox
       </h3>
@@ -69,8 +82,16 @@ export function FacebookRejectionPatternsSection() {
         Facebook&apos;s name validator runs <strong>server-side</strong>, not
         client-side. A name can render perfectly in the preview field but get
         rejected because the Unicode codepoints fall outside Facebook&apos;s
-        allowlist. Blocks like Mathematical Alphanumeric Symbols (U+1D400–U+1D7FF)
-        are partly allowlisted — some subranges pass, others don&apos;t, with no
+        allowlist. Blocks like Mathematical Alphanumeric Symbols (
+        <a
+          href="https://www.unicode.org/charts/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="intro-link"
+        >
+          U+1D400–U+1D7FF
+        </a>
+        ) are partly allowlisted — some subranges pass, others don&apos;t, with no
         public documentation explaining which.
       </p>
 
@@ -109,8 +130,8 @@ export function FacebookRejectionPatternsSection() {
       <p>
         New accounts (under 90 days) face a stricter Unicode subset than aged
         accounts. The same font style that works on a 3-year-old account can fail
-        silently on a fresh one. If you are on a new account, start with styles
-        marked <strong>✅ Works on Facebook</strong> in our{" "}
+        silently on a fresh one. If you are on a new account, start with simpler
+        styles like Sans Bold or Bold Cursive in our{" "}
         <Link href="#hero-heading" className="intro-link">
           generator above
         </Link>
@@ -122,7 +143,7 @@ export function FacebookRejectionPatternsSection() {
         <li>
           <strong>Did the preview look fine but save failed?</strong> Your
           codepoints are outside Facebook&apos;s server-side allowlist — switch
-          to Cursive Script or Sans Bold.
+          to Sans Bold or Bold Cursive.
         </li>
         <li>
           <strong>Did it save but friends see boxes?</strong> Their device lacks
@@ -133,8 +154,8 @@ export function FacebookRejectionPatternsSection() {
           across First name and Last name fields instead of one field.
         </li>
         <li>
-          <strong>New account under 90 days?</strong> Stick to the green-check
-          styles only — stricter Unicode subset applies.
+          <strong>New account under 90 days?</strong> Stick to simpler styles
+          like Sans Bold or Bold Cursive — a stricter Unicode subset applies.
         </li>
         <li>
           <strong>Already tried 2–3 styles?</strong> Stop testing. Failed
@@ -145,9 +166,9 @@ export function FacebookRejectionPatternsSection() {
 
       <ExpertNote>
         Knowing rejection patterns lets you predict and avoid failures instead
-        of burning your 60-day window. Test one style marked ✅ Works on
-        Facebook, confirm it saved correctly on a friend&apos;s device, then
-        stop — do not iterate rapidly on rejected names.
+        of burning your 60-day window. Test one simple style, confirm it saved
+        correctly on a friend&apos;s device, then stop — do not iterate rapidly
+        on rejected names.
       </ExpertNote>
     </section>
   );
@@ -173,10 +194,27 @@ export function FacebookMessengerGapSection() {
       <h3 className="article-subheading">The three rendering environments</h3>
       <p>
         <strong>Facebook Web</strong>, <strong>Facebook App</strong> (Android/iOS),
-        and <strong>Messenger App</strong> each render Unicode through different
-        engines. Cursive Script renders identically across all three. Bold
+        and <strong>Messenger App</strong> each render{" "}
+        <a
+          href="https://www.unicode.org/charts/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="intro-link"
+        >
+          Unicode
+        </a>{" "}
+        through different engines. Sans Bold renders identically across all three. Bold
         Fraktur renders correctly on Facebook Web and iOS Messenger, but falls
-        back to system font on Android Messenger below API level 29.
+        back to system font on Android Messenger below{" "}
+        <a
+          href="https://developer.android.com/tools/releases/platforms#10"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="intro-link"
+        >
+          API level 29
+        </a>
+        .
       </p>
 
       <h3 className="article-subheading">
@@ -235,7 +273,7 @@ export function FacebookMessengerGapSection() {
         test in Messenger specifically — open a DM with yourself or a friend
         and confirm the name renders correctly there, not just on your profile.
         The reliable cross-surface list is shorter than most generators
-        acknowledge: Cursive Script, Sans Bold, and Double Struck are the safest
+        acknowledge: Sans Bold, Bold Cursive, and Double Struck are the safest
         bets.
       </ExpertNote>
     </section>
@@ -252,8 +290,16 @@ export function FacebookMythsSection() {
         Facebook Stylish Name Myths vs What Actually Happens
       </h2>
       <p>
-        Most articles repeat advice without testing whether it still holds after
-        Facebook&apos;s 2021–2023 app UI rebuilds changed name field behaviour.
+        Most articles repeat advice without testing whether it still holds after{" "}
+        <a
+          href="https://about.fb.com/news/2022/07/home-and-feeds-on-facebook/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="intro-link"
+        >
+          Facebook&apos;s 2021–2023 app UI rebuilds
+        </a>{" "}
+        changed name field behaviour.
         These myths circulate unchecked — here is what hands-on testing actually
         shows.
       </p>
@@ -368,6 +414,15 @@ export function FacebookBioTypographySection() {
         font question. The font is 20% of the result. The structure is 80%.
       </p>
 
+      <Image
+        src={BIO_TYPOGRAPHY_SCREENSHOT}
+        alt="Facebook profile Intro section showing a bio with bold cursive and Fraktur Unicode fonts above Edit Bio buttons"
+        width={729}
+        height={463}
+        sizes="(max-width: 768px) 100vw, 640px"
+        className="mt-6 w-full max-w-2xl rounded-xl border border-[var(--border)]"
+      />
+
       <h3 className="article-subheading">The three-line rule for Facebook bios</h3>
       <p>
         Facebook&apos;s About section shows approximately 3 lines before
@@ -406,7 +461,7 @@ export function FacebookBioTypographySection() {
         For professional profiles, business pages, and creator accounts building
         perceived authority, heavily decorated names (border styles, star frames)
         signal &ldquo;casual user&rdquo; rather than &ldquo;credible
-        creator.&rdquo; The same Cursive Script that looks elegant on a personal
+        creator.&rdquo; The same Bold Cursive that looks elegant on a personal
         profile looks out of place on a business consultant&apos;s profile.
       </p>
 
@@ -433,8 +488,8 @@ export function FacebookBioTypographySection() {
       </h3>
       <ol className="decision-tree">
         <li>
-          <strong>Display name field?</strong> Yes — but only Cursive Script or
-          Sans Bold, and keep it readable. No border frames.
+          <strong>Display name field?</strong> Yes — but only Sans Bold or
+          Bold Cursive, and keep it readable. No border frames.
         </li>
         <li>
           <strong>Bio line 1 (identity)?</strong> Yes — one styled line for
@@ -446,7 +501,7 @@ export function FacebookBioTypographySection() {
         </li>
         <li>
           <strong>Business or professional profile?</strong> Plain text
-          preferred — or Cursive Script on line 1 only, no borders.
+          preferred — or Bold Cursive on line 1 only, no borders.
         </li>
         <li>
           <strong>Status update or comment?</strong> One styled phrase maximum —

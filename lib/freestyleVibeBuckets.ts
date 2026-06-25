@@ -19,7 +19,7 @@ export const FREESTYLE_VIBE_BUCKETS: VibeBucket[] = [
     label: "Soft / Aesthetic",
     emoji: "🌸",
     description: "Flowing script and delicate caps for a gentle vibe.",
-    styleIds: ["cursive-script", "bold-cursive", "small-caps"],
+    styleIds: ["bold-cursive", "small-caps", "sans-italic"],
   },
   {
     id: "cool",

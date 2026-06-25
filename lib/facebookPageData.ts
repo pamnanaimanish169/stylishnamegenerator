@@ -110,17 +110,17 @@ export const FAQ_ITEMS = [
   {
     question: "What is a Facebook stylish name maker?",
     answer:
-      "A Facebook stylish name maker converts plain text into fancy Unicode fonts you can copy and paste into your Facebook profile name, bio, or status. It uses special Unicode letterforms — the same technology behind stylish text on Instagram and WhatsApp — so no app install is needed. Our stylish name maker for Facebook tests each font style for compatibility with Facebook's web and mobile apps, so you know which styles will render correctly before you paste.",
+      "A Facebook stylish name maker converts plain text into fancy Unicode fonts you can copy and paste into your Facebook profile name, bio, or status. It uses special Unicode letterforms — the same technology behind stylish text on Instagram and WhatsApp — so no app install is needed.",
   },
   {
     question: "How do I change my FB name to a stylish font?",
     answer:
-      "Type your name in the FB stylish name generator above, pick a style marked with a green checkmark, and tap Copy. Open Facebook → tap your profile picture → Settings & privacy → Settings → Personal details → Name. Tap your name, paste the styled text into the First name or Last name field, and save. The same styled text works in Messenger. If Facebook rejects the name, try a simpler style like Cursive Script or Sans Bold — these are the most reliable on all devices.",
+      "Type your name in the FB stylish name generator above, pick a style you like, and tap Copy. Open Facebook → tap your profile picture → Settings & privacy → Settings → Personal details → Name. Tap your name, paste the styled text into the First name or Last name field, and save. The same styled text works in Messenger. If Facebook rejects the name, try a simpler style like Sans Bold or Bold Cursive — these are the most reliable on all devices.",
   },
   {
     question: "Why does my stylish Facebook name look like boxes?",
     answer:
-      "Facebook's app has inconsistent Unicode support — especially on older Android versions. Some font styles that work perfectly on Instagram or in games render as empty boxes (□) on Facebook. Heavily combining-character styles like strikethrough and underline are the worst offenders. On this page, fonts marked with a green checkmark (✅) are tested to work on Facebook web and app. Yellow warning (⚠️) styles may look fine on web but break on some mobile apps. The safest fonts for Facebook names are Cursive Script, Bold Cursive, and Sans Bold.",
+      "Facebook's app has inconsistent Unicode support — especially on older Android versions. Some font styles that work perfectly on Instagram or in games render as empty boxes (□) on Facebook. Heavily combining-character styles like strikethrough and underline are the worst offenders. The safest fonts for Facebook names are Bold Cursive and Sans Bold.",
   },
   {
     question: "Can I use these fonts for my Facebook status and bio too?",

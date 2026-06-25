@@ -112,7 +112,7 @@ export const BGMI_PLAY_STYLE_DECISION = [
     goal: "Casual flex / fun with friends",
     approach: "Go decorative",
     recommendation:
-      "Use star borders, cursive script cores, and squad-matching prefixes. Readability across every device matters less in casual lobbies — prioritise the wow factor your friends will screenshot.",
+      "Use star borders, bold cursive cores, and squad-matching prefixes. Readability across every device matters less in casual lobbies — prioritise the wow factor your friends will screenshot.",
     example: "★彡𝓝𝓲𝓰𝓱𝓽彡★",
   },
   {

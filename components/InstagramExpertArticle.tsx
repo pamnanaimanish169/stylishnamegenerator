@@ -61,7 +61,7 @@ export function InstagramFontsBreakSection() {
         blank squares (□□□) — nicknamed &ldquo;tofu&rdquo; after the placeholder
         shape. The safest range for Instagram bios is the{" "}
         <strong>Mathematical Alphanumeric Symbols</strong> block (U+1D400–U+1D7FF)
-        — that&apos;s where Cursive Script, Bold Cursive, Sans Italic, and Double
+        — that&apos;s where Bold Cursive, Sans Italic, and Double
         Struck live. Higher-risk styles include{" "}
         <strong>Enclosed Alphanumerics</strong> (Circled) and some decorative
         symbols outside standard blocks.
@@ -73,7 +73,7 @@ export function InstagramFontsBreakSection() {
       <p>
         A font may look perfect in a web-based generator but render differently
         inside Instagram&apos;s native bio field. Instagram uses its own text
-        engine on iOS vs. Android — Cursive Script Unicode often appears
+        engine on iOS vs. Android — Bold Cursive Unicode often appears
         slightly rounder on iPhone and sharper on Samsung devices. Always paste
         into Instagram&apos;s <strong>Edit Profile</strong> preview before
         publishing, not just our tool output.
@@ -195,7 +195,7 @@ export function InstagramCharCountSection() {
 
       <h3 className="article-subheading">How Instagram counts characters</h3>
       <p>
-        Fancy font letters from our generator (Cursive, Bold, Small Caps, etc.)
+        Fancy font letters from our generator (Bold Cursive, Small Caps, etc.)
         are single code points — they count <strong>1-for-1</strong> against
         your limit, same as plain Latin. Emoji are different: a simple heart ❤️
         counts as one character, but a rainbow flag 🏳️‍🌈 is a{" "}
@@ -373,7 +373,7 @@ export function InstagramCreatorWorkflowSection() {
       <p>
         Matching bio font style, Story highlight covers, and grid aesthetic
         creates subconscious trust for first-time visitors. Pick one generator
-        style (e.g. Cursive Script or Small Caps) and use it consistently
+        style (e.g. Bold Cursive or Small Caps) and use it consistently
         across bio lines — not a different font on every line.
       </p>
 

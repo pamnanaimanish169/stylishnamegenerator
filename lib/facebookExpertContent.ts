@@ -1,17 +1,10 @@
 export const MESSENGER_RENDERING_ROWS = [
   {
-    style: "Cursive Script",
-    fbWeb: "Correct",
-    fbApp: "Correct",
-    messengerApp: "Correct",
-    note: "Identical across all three surfaces — safest cross-surface choice.",
-  },
-  {
     style: "Bold Cursive",
     fbWeb: "Correct",
     fbApp: "Correct",
     messengerApp: "Correct",
-    note: "Same Mathematical Alphanumeric block as Cursive Script.",
+    note: "Broadly supported across Facebook surfaces and Messenger.",
   },
   {
     style: "Sans Bold",
@@ -57,40 +50,40 @@ export const MESSENGER_RENDERING_ROWS = [
   },
 ] as const;
 
+export type MythVerdict = "Busted" | "Partially True" | "Context-Dependent";
+
 export const MYTH_REALITY_ROWS = [
   {
     myth: "Any Unicode font works if it renders on your screen",
     reality:
       "Rendering on your screen uses your device's local font stack. What Facebook's servers store and what other users' devices render are entirely separate — a name can look perfect to you and appear as boxes to friends on older Android.",
-    verdict: "Busted" as const,
+    verdict: "Busted" as MythVerdict,
   },
   {
     myth: "Stylish names violate Facebook's real name policy",
     reality:
       "Facebook's authentic name policy prohibits fake identities, not Unicode letterforms. Legitimate script representations are permitted — the policy targets impersonation and fake personas, not font style.",
-    verdict: "Busted" as const,
+    verdict: "Busted" as MythVerdict,
   },
   {
     myth: "You can reset the 60-day timer by deactivating your account",
     reality:
       "The name change cooldown persists through deactivation and reactivation. The only documented reset is a successful appeal through Facebook's name support form with ID verification.",
-    verdict: "Busted" as const,
+    verdict: "Busted" as MythVerdict,
   },
   {
     myth: "Stylish names don't work on Facebook anymore after the 2023 update",
     reality:
       "Facebook changed its profile UI, not its name field Unicode handling. Existing stylish names appeared differently in the new header layout's smaller, bolder font — less legible, not actually broken.",
-    verdict: "Partially True" as const,
+    verdict: "Partially True" as MythVerdict,
   },
   {
     myth: "All stylish name generators produce identical output",
     reality:
       "Underlying Unicode mapping varies. Some generators use Mathematical Bold Script; others use Letterlike Symbols or Enclosed Alphanumerics. Visual output looks similar but codepoints differ — with different Facebook compatibility results.",
-    verdict: "Busted" as const,
+    verdict: "Busted" as MythVerdict,
   },
 ] as const;
-
-export type MythVerdict = (typeof MYTH_REALITY_ROWS)[number]["verdict"];
 
 export const CROSS_PLATFORM_LIMIT_ROWS = [
   {
@@ -135,12 +128,12 @@ export const CROSS_PLATFORM_FRAMEWORK_STEPS = [
   {
     step: "Pick an anchor style",
     detail:
-      "Choose Cursive Script or Sans Bold as your cross-platform anchor — broadest Unicode support across Facebook, Instagram, WhatsApp, and Telegram. Use Fraktur or Double Struck only in bios and status text where rendering failures are lower-stakes.",
+      "Choose Sans Bold or Bold Cursive as your cross-platform anchor — broad Unicode support across Facebook, Instagram, WhatsApp, and Telegram. Use Fraktur or Double Struck only in bios and status text where rendering failures are lower-stakes.",
   },
   {
     step: "Budget against the tightest limit",
     detail:
-      "Facebook allows 50 characters total across first + last name. Cursive Script characters are 4 bytes each in UTF-8 — a 10-glyph name can hit byte limits on platforms that count bytes, not glyphs. Design for WhatsApp's ~25 visible characters first.",
+      "Facebook allows 50 characters total across first + last name. Fancy Unicode characters are 4 bytes each in UTF-8 — a 10-glyph name can hit byte limits on platforms that count bytes, not glyphs. Design for WhatsApp's ~25 visible characters first.",
   },
   {
     step: "Compensate with profile imagery",
@@ -163,7 +156,7 @@ export const BIO_FRAMEWORK_LINES = [
   {
     line: "Line 1 — Identity",
     example: "𝓒𝓸𝓷𝓽𝓮𝓷𝓽 𝓒𝓻𝓮𝓪𝓽𝓸𝓻 ✨",
-    font: "Cursive Script (styled)",
+    font: "Bold Cursive (styled)",
     purpose: "Role or identity statement — styled selectively for contrast above the fold.",
   },
   {

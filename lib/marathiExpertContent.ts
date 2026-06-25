@@ -145,7 +145,7 @@ export const STYLE_STACK_ELEMENTS = [
   {
     element: "Latin Unicode style",
     role: "Romanised name in captions",
-    example: "𝓟𝓻𝓪𝓽𝓲𝓴 (Cursive Script)",
+    example: "𝓟𝓻𝓪𝓽𝓲𝓴 (Bold Cursive)",
     note: "For English transliterations only — Devanagari stays in plain or framed script",
   },
 ] as const;

@@ -29,8 +29,6 @@ const doubleStruck = mapFromOffsets(0x1d552, 0x1d538, {
   Z: 0x2124,
 });
 
-const cursiveScript = mapFromOffsets(0x1d4b6, 0x1d49c);
-
 const boldCursive = mapFromOffsets(0x1d482, 0x1d468);
 const frakturGothic = mapFromOffsets(0x1d51e, 0x1d504);
 const boldFraktur = mapFromOffsets(0x1d586, 0x1d56c);
@@ -181,7 +179,6 @@ export function generateAll(input: string): FontStyleResult[] {
 
   const styles: FontStyleResult[] = [
     { id: "double-struck", name: "Double Struck", text: applyMap(name, doubleStruck) },
-    { id: "cursive-script", name: "Cursive Script", text: applyMap(name, cursiveScript) },
     { id: "bold-cursive", name: "Bold Cursive", text: applyMap(name, boldCursive) },
     { id: "fraktur-gothic", name: "Fraktur Gothic", text: applyMap(name, frakturGothic) },
     { id: "bold-fraktur", name: "Bold Fraktur", text: applyMap(name, boldFraktur) },
@@ -206,7 +203,7 @@ export function generateAll(input: string): FontStyleResult[] {
     {
       id: "bgmi-border",
       name: "BGMI Border",
-      text: `꧁༺ ${applyMap(name, cursiveScript)} ༻꧂`,
+      text: `꧁༺ ${applyMap(name, sansBold)} ༻꧂`,
     },
     {
       id: "fire-style",
@@ -231,7 +228,6 @@ export function generateAll(input: string): FontStyleResult[] {
 /** Unicode styles that render reliably in BGMI's 16-character name field. */
 const BGMI_STYLE_IDS = [
   "double-struck",
-  "cursive-script",
   "bold-cursive",
   "fraktur-gothic",
   "bold-fraktur",
@@ -257,7 +253,6 @@ export type FreeFireStyleResult = FontStyleResult & {
 /** Unicode styles shown on the Free Fire generator (wider set than BGMI). */
 const FREE_FIRE_STYLE_IDS = [
   "double-struck",
-  "cursive-script",
   "bold-cursive",
   "fraktur-gothic",
   "bold-fraktur",
@@ -279,7 +274,6 @@ const FREE_FIRE_STYLE_IDS = [
 
 const FREE_FIRE_COMPATIBLE_IDS = new Set<string>([
   "double-struck",
-  "cursive-script",
   "bold-cursive",
   "fraktur-gothic",
   "bold-fraktur",
@@ -321,7 +315,6 @@ export function applyFreestyleStyleById(
 
 /** Aesthetic Unicode styles for Instagram bios, captions, and display names. */
 const INSTAGRAM_STYLE_IDS = [
-  "cursive-script",
   "bold-cursive",
   "small-caps",
   "sans-italic",
@@ -342,7 +335,6 @@ function applyMultiline(
 
 /** Latin fancy fonts for Marathi users typing names in English. */
 const MARATHI_LATIN_STYLE_IDS = [
-  "cursive-script",
   "bold-cursive",
   "double-struck",
   "sans-bold",
@@ -359,7 +351,6 @@ export function generateMarathiLatin(input: string): FontStyleResult[] {
     (typeof MARATHI_LATIN_STYLE_IDS)[number],
     { name: string; map: Record<string, string> }
   > = {
-    "cursive-script": { name: "Cursive Script", map: cursiveScript },
     "bold-cursive": { name: "Bold Cursive", map: boldCursive },
     "double-struck": { name: "Double Struck", map: doubleStruck },
     "sans-bold": { name: "Sans Bold", map: sansBold },
@@ -385,9 +376,8 @@ export type FacebookStyleResult = FontStyleResult & {
   fbCompat: FacebookCompatLevel;
 };
 
-/** Unicode styles for Facebook — 13 styles, excluding broken combining styles. */
+/** Unicode styles for Facebook — 12 styles, excluding broken combining styles. */
 const FACEBOOK_STYLE_IDS = [
-  "cursive-script",
   "bold-cursive",
   "double-struck",
   "sans-bold",
@@ -403,7 +393,6 @@ const FACEBOOK_STYLE_IDS = [
 ] as const;
 
 const FACEBOOK_COMPAT_OK = new Set<string>([
-  "cursive-script",
   "bold-cursive",
   "double-struck",
   "sans-bold",
@@ -437,7 +426,6 @@ export function generateInstagramAll(input: string): FontStyleResult[] {
     (typeof INSTAGRAM_STYLE_IDS)[number],
     { name: string; map: Record<string, string> }
   > = {
-    "cursive-script": { name: "Cursive Script", map: cursiveScript },
     "bold-cursive": { name: "Bold Cursive", map: boldCursive },
     "small-caps": { name: "Small Caps", map: smallCaps },
     "sans-italic": { name: "Sans Italic", map: sansItalic },

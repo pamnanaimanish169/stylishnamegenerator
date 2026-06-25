@@ -1,21 +1,12 @@
 export const FONT_COMPATIBILITY_ROWS = [
   {
-    style: "Cursive Script",
-    bio: "Yes",
-    name: "Caution",
-    feedCaption: "Yes",
-    stories: "No",
-    tofuRisk: "Low–Medium",
-    note: "iOS renders slightly rounder than Android on older devices.",
-  },
-  {
     style: "Bold Cursive",
     bio: "Yes",
     name: "Caution",
     feedCaption: "Yes",
     stories: "No",
     tofuRisk: "Low–Medium",
-    note: "Same Mathematical Alphanumeric block as Cursive Script.",
+    note: "Widely supported on modern iOS and Android.",
   },
   {
     style: "Small Caps",
@@ -149,7 +140,7 @@ export const CREATOR_FRAMEWORK_LINES = [
   {
     line: "Line 1 — Identity",
     example: "✨ 𝒟𝓇𝑒𝒶𝓂𝑒𝓇 · Content Creator",
-    font: "Bold Cursive or Cursive Script",
+    font: "Bold Cursive",
     purpose: "Who you are — styled to grab attention above the fold.",
   },
   {
