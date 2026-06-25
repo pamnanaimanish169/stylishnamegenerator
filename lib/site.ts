@@ -8,6 +8,7 @@ export const SITEMAP_PATHS = [
   "/free-fire-name-generator",
   "/freestyle-nickname-generator",
   "/instagram-stylish-fonts",
+  "/facebook-stylish-name-generator",
   "/stylish-marathi-fonts",
   "/bgmi-symbols",
   "/about-us",

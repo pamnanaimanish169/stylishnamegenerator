@@ -258,6 +258,11 @@ export const IG_RELATED_TOOLS = [
     description: "Every Unicode font style in one place — all platforms.",
   },
   {
+    href: "/facebook-stylish-name-generator",
+    title: "Facebook Stylish Name Generator",
+    description: "Fancy Unicode fonts tested for Facebook profile names.",
+  },
+  {
     href: "/freestyle-nickname-generator",
     title: "Freestyle Nickname Generator",
     description: "Mix symbols and fonts for gaming, social, and chat apps.",

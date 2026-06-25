@@ -379,6 +379,57 @@ export function generateMarathiLatin(input: string): FontStyleResult[] {
   });
 }
 
+export type FacebookCompatLevel = "ok" | "vary";
+
+export type FacebookStyleResult = FontStyleResult & {
+  fbCompat: FacebookCompatLevel;
+};
+
+/** Unicode styles for Facebook — 13 styles, excluding broken combining styles. */
+const FACEBOOK_STYLE_IDS = [
+  "cursive-script",
+  "bold-cursive",
+  "double-struck",
+  "sans-bold",
+  "sans-italic",
+  "small-caps",
+  "fullwidth",
+  "fraktur-gothic",
+  "bold-fraktur",
+  "monospace",
+  "bgmi-border",
+  "star-style",
+  "ff-border",
+] as const;
+
+const FACEBOOK_COMPAT_OK = new Set<string>([
+  "cursive-script",
+  "bold-cursive",
+  "double-struck",
+  "sans-bold",
+  "sans-italic",
+  "small-caps",
+  "fullwidth",
+]);
+
+export const FACEBOOK_NAME_LIMIT = 50;
+
+export function generateFacebookAll(input: string): FacebookStyleResult[] {
+  const name = input.trim() === "" ? "YourName" : input;
+
+  const allStyles = generateAll(name);
+  const facebookSet = new Set<string>(FACEBOOK_STYLE_IDS);
+
+  return allStyles
+    .filter((style) => facebookSet.has(style.id))
+    .map((style) => {
+      const fbCompat: FacebookCompatLevel = FACEBOOK_COMPAT_OK.has(style.id)
+        ? "ok"
+        : "vary";
+      return { ...style, fbCompat };
+    });
+}
+
 export function generateInstagramAll(input: string): FontStyleResult[] {
   const text = input.trim() === "" ? "YourName" : input;
 

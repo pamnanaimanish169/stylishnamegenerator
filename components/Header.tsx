@@ -5,6 +5,7 @@ const navLinks = [
   { href: "/bgmi-name-generator", label: "BGMI Generator" },
   { href: "/free-fire-name-generator", label: "Free Fire Generator" },
   { href: "/instagram-stylish-fonts", label: "Instagram Fonts" },
+  { href: "/facebook-stylish-name-generator", label: "FB Generator" },
 ];
 
 export default function Header() {

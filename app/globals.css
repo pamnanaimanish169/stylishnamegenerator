@@ -734,6 +734,66 @@ body {
   background: var(--neon-pink-dim);
 }
 
+.style-card--compat {
+  overflow: visible;
+}
+
+.fb-compat-badge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.03em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--night-surface);
+  color: var(--cream-muted);
+  cursor: pointer;
+  text-align: left;
+  max-width: calc(100% - 1.5rem);
+  transition: box-shadow 0.15s ease;
+}
+
+.fb-compat-badge--ok {
+  color: var(--neon-cyan);
+  border-color: rgba(0, 232, 255, 0.35);
+  background: var(--neon-cyan-dim);
+}
+
+.fb-compat-badge--warn {
+  color: #e8c547;
+  border-color: rgba(232, 197, 71, 0.4);
+  background: rgba(232, 197, 71, 0.08);
+}
+
+.fb-compat-badge--bad {
+  color: #ff6b6b;
+  border-color: rgba(255, 107, 107, 0.4);
+  background: rgba(255, 107, 107, 0.08);
+}
+
+.fb-compat-badge--expanded {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.fb-compat-badge__short {
+  white-space: nowrap;
+}
+
+.fb-compat-badge__detail {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.6rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  white-space: normal;
+  color: var(--cream);
+}
+
 .curated-name-grid {
   display: flex;
   flex-direction: column;
@@ -1468,6 +1528,36 @@ body {
 
 .reality-label {
   color: var(--neon-lime);
+}
+
+.verdict-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.45rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.verdict-badge--busted {
+  color: var(--neon-pink);
+  border-color: rgba(255, 45, 149, 0.35);
+  background: var(--neon-pink-dim);
+}
+
+.verdict-badge--partial {
+  color: var(--neon-cyan);
+  border-color: rgba(0, 232, 255, 0.28);
+  background: var(--neon-cyan-dim);
+}
+
+.verdict-badge--context {
+  color: var(--neon-lime);
+  border-color: rgba(180, 255, 57, 0.28);
+  background: rgba(180, 255, 57, 0.08);
 }
 
 .bio-framework {

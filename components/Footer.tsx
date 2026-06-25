@@ -15,6 +15,15 @@ export default function Footer() {
             </li>
             <li>
               <a
+                href="/facebook-stylish-name-generator"
+                suppressHydrationWarning
+                className="footer-link"
+              >
+                FB Generator
+              </a>
+            </li>
+            <li>
+              <a
                 href="/stylish-marathi-fonts"
                 suppressHydrationWarning
                 className="footer-link"

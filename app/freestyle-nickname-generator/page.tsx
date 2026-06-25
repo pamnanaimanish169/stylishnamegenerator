@@ -41,7 +41,7 @@ const FAQ_ITEMS = [
   {
     question: "Can I use these nicknames on WhatsApp and Instagram?",
     answer:
-      "Yes. Unicode nicknames paste into WhatsApp display names, Instagram bios, Telegram usernames, and most chat apps that accept special characters. Instagram profile names have a 30-character limit, so shorter nicknames work best there. For caption and bio-only fonts, browse our fancy fonts for Instagram page — it covers styles optimized for social feeds rather than usernames.",
+      "Yes. Unicode nicknames paste into WhatsApp display names, Instagram bios, Facebook profile names, Telegram usernames, and most chat apps that accept special characters. Instagram profile names have a 30-character limit, so shorter nicknames work best there. For Facebook display names, use our Facebook stylish names page — it labels which fonts actually render on FB. For caption and bio-only fonts, browse our fancy fonts for Instagram page — it covers styles optimized for social feeds rather than usernames.",
   },
 ] as const;
 
@@ -69,10 +69,18 @@ function renderFaqAnswer(question: string) {
       return (
         <>
           Yes. Unicode nicknames paste into WhatsApp display names, Instagram
-          bios, Telegram usernames, and most chat apps that accept special
-          characters. Instagram profile names have a 30-character limit, so
-          shorter nicknames work best there. For caption and bio-only fonts,
-          browse our{" "}
+          bios, Facebook profile names, Telegram usernames, and most chat apps
+          that accept special characters. Instagram profile names have a
+          30-character limit, so shorter nicknames work best there. For
+          Facebook display names, use our{" "}
+          <Link
+            href="/facebook-stylish-name-generator"
+            className="article-link"
+          >
+            Facebook stylish names
+          </Link>{" "}
+          page — it labels which fonts actually render on FB. For caption and
+          bio-only fonts, browse our{" "}
           <Link href="/instagram-stylish-fonts" className="article-link">
             fancy fonts for Instagram
           </Link>{" "}
