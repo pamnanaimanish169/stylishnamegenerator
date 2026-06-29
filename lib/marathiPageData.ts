@@ -159,6 +159,11 @@ export const MARATHI_RELATED_TOOLS = [
     title: "Instagram Stylish Fonts",
     description: "Fancy Unicode bios, captions, and emoji for Instagram.",
   },
+  {
+    href: "/arabic-font-generator",
+    title: "Arabic Font Generator",
+    description: "RTL-aware stylish Arabic and Urdu text for WhatsApp.",
+  },
 ] as const;
 
 export function generateDecoratedMarathi(input: string) {

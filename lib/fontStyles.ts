@@ -405,6 +405,33 @@ export function generateHindiLatin(input: string): FontStyleResult[] {
   });
 }
 
+/** Latin fancy fonts for Arabic/Urdu users typing names in English — same set as Hindi Section B. */
+export function generateArabicLatin(input: string): FontStyleResult[] {
+  const name = input.trim() || "Rahim";
+
+  const styleMaps: Record<
+    (typeof MARATHI_LATIN_STYLE_IDS)[number],
+    { name: string; map: Record<string, string> }
+  > = {
+    "bold-cursive": { name: "Bold Cursive", map: boldCursive },
+    "double-struck": { name: "Double Struck", map: doubleStruck },
+    "sans-bold": { name: "Sans Bold", map: sansBold },
+    circled: { name: "Circled", map: circled },
+    "small-caps": { name: "Small Caps", map: smallCaps },
+    fullwidth: { name: "Fullwidth", map: fullwidth },
+    "fraktur-gothic": { name: "Fraktur Gothic", map: frakturGothic },
+  };
+
+  return MARATHI_LATIN_STYLE_IDS.map((id) => {
+    const { name: styleName, map } = styleMaps[id]!;
+    return {
+      id,
+      name: styleName,
+      text: applyMap(name, map),
+    };
+  });
+}
+
 export type FacebookCompatLevel = "ok" | "vary";
 
 export type FacebookStyleResult = FontStyleResult & {

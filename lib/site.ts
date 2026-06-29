@@ -11,6 +11,7 @@ export const SITEMAP_PATHS = [
   "/facebook-stylish-name-generator",
   "/stylish-marathi-fonts",
   "/hindi-stylish-fonts-generator",
+  "/arabic-font-generator",
   "/bgmi-symbols",
   "/about-us",
   "/contact-us",

@@ -40,6 +40,15 @@ export default function Footer() {
                 Hindi Fonts
               </a>
             </li>
+            <li>
+              <a
+                href="/arabic-font-generator"
+                suppressHydrationWarning
+                className="footer-link"
+              >
+                Arabic/Urdu Fonts
+              </a>
+            </li>
           </ul>
         </nav>
         <nav aria-label="Legal and information">
