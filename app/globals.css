@@ -499,6 +499,7 @@ body {
   background: var(--neon-lime);
   color: var(--night);
   border: none;
+  cursor: pointer;
   box-shadow:
     0 0 20px var(--glow-lime),
     0 4px 0 #9ec400;
@@ -560,6 +561,7 @@ body {
   background: transparent;
   color: var(--neon-pink);
   border: 1px solid rgba(255, 45, 149, 0.45);
+  cursor: pointer;
   transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
 }
 
@@ -1454,6 +1456,11 @@ body {
   color: var(--cream-muted);
 }
 
+.article-table tr.is-current-letter td {
+  background: var(--neon-lime-dim, rgba(198, 255, 58, 0.08));
+  color: var(--cream);
+}
+
 .article-note {
   margin-top: 1.25rem;
   padding: 1rem 1.15rem;
@@ -1934,6 +1941,7 @@ body {
   background: transparent;
   color: #25d366;
   border: 1px solid rgba(37, 211, 102, 0.45);
+  cursor: pointer;
   transition:
     background 0.2s,
     color 0.2s,

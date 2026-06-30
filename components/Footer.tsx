@@ -58,6 +58,33 @@ export default function Footer() {
                 Wavy Text
               </a>
             </li>
+            <li>
+              <a
+                href="/s-stylish-name"
+                suppressHydrationWarning
+                className="footer-link"
+              >
+                S Names
+              </a>
+            </li>
+            <li>
+              <a
+                href="/m-stylish-name"
+                suppressHydrationWarning
+                className="footer-link"
+              >
+                M Names
+              </a>
+            </li>
+            <li>
+              <a
+                href="/j-stylish-name"
+                suppressHydrationWarning
+                className="footer-link"
+              >
+                J Names
+              </a>
+            </li>
           </ul>
         </nav>
         <nav aria-label="Legal and information">

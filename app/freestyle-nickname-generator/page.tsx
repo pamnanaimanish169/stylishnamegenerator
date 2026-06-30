@@ -648,7 +648,19 @@ export default function FreestyleNicknameGeneratorPage() {
               <Link href="/wavy-text-generator" className="article-link">
                 wavy text generator
               </Link>
-              .
+              . You can also browse names by letter —{" "}
+              <Link href="/s-stylish-name" className="article-link">
+                S
+              </Link>
+              ,{" "}
+              <Link href="/m-stylish-name" className="article-link">
+                M
+              </Link>
+              , or{" "}
+              <Link href="/j-stylish-name" className="article-link">
+                J
+              </Link>{" "}
+              stylish names.
             </p>
             <CuratedNameGrid
               categories={FREESTYLE_CURATED_NAMES}
